@@ -6,10 +6,10 @@ using UnityEngine;
 public class SimpleRandomBlock : MonoBehaviour
 {
     // Tweakable variables
-    [Range(1f, 10f)] public float maxSizeX = 1f;
-    [Range(1f, 10f)] public float maxSizeY = 1f;
+    [Range(1f, 10f)] public float maxSizeX = 3f;
+    [Range(1f, 10f)] public float maxSizeY = 3f;
     [Range(0.1f, 1f)] public float minMass = 1f;
-    [Range(1f, 50f)] public float maxMass = 1f;
+    [Range(1f, 50f)] public float maxMass = 50f;
 
     public Color lightColor = new Color(0, 255f, 0, 255f);
     public Color mediumColor = new Color(255f, 255f, 0, 255f);
@@ -29,14 +29,31 @@ public class SimpleRandomBlock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int form = Random.Range(0, 1);
+        bool isBlock = true;
+        if (form == 1)
+        {
+            isBlock = false;
+        }
+
         // Get components...
         rBody = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>();
         theObject = GetComponent<Transform>();
 
         // Set stuff
-        theObject.localScale = new Vector3(Random.Range(0.5f, maxSizeX), Random.Range(0.5f, maxSizeY), 0f);
-        rBody.gravityScale = rBody.mass * (theObject.localScale.x + theObject.localScale.y);
+        if (isBlock)
+        {
+            float randCircleSize = Random.Range(0.5f, maxSizeX);
+            theObject.localScale = new Vector3(randCircleSize, randCircleSize, 0f);
+            rBody.gravityScale = rBody.mass * (theObject.localScale.x *2);
+        }
+        else
+        {
+            theObject.localScale = new Vector3(Random.Range(0.5f, maxSizeX), Random.Range(0.5f, maxSizeY), 0f);
+            rBody.gravityScale = rBody.mass * (theObject.localScale.x + theObject.localScale.y);
+        }
+
 
         rBody.mass = Random.Range(minMass, maxMass);
         if (rBody.mass < lightValue)
