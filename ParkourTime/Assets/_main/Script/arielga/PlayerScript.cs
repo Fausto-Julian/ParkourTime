@@ -7,9 +7,10 @@ public class PlayerScript : MonoBehaviour
     // Tweakable variables
     [Range(1f, 25f)] public float speed = 10f;
     [Range(1f, 30f)] public float maxSpeed = 25f;
-    [Range(0.11f, 2f)] public float jumpForce = 0.2f;
-    [Range(0.1f, 0.5f)] public float jumpTime = 0.2f;
+    [Range(0.11f, 500f)] public float jumpForce = 120f;
+    //[Range(0.1f, 2f)] public float jumpTime = 0.2f;
     [Range(10f, 1000f)] public float forcedGravity = 1f;
+    public GameObject feets;
 
     // Some variables
     Rigidbody2D rbody;
@@ -18,25 +19,42 @@ public class PlayerScript : MonoBehaviour
     float t;
     public float jumpTimer = 0;
     public bool isCallingJump = false;
+    public bool isAlreadyJumping = false;
+    private float ogFG = 0f;
+
+    public float testX = 0f;
+
+    public LayerMask theLayerMask;
 
     // Start is called before the first frame update
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         theCollider = GetComponent<Collider2D>();
+        ogFG = forcedGravity;
     }
 
     private void Update()
     {
         t = Time.deltaTime;
-        input = Vector2.ClampMagnitude(new Vector2(Input.GetAxisRaw("Horizontal"), 0f), 1f);
-        IsGrounded();
-
-        if (Input.GetKeyDown(KeyCode.Space) && !isCallingJump)
+        if (forcedGravity != 0)
         {
-            isCallingJump = true;
+            input = Vector2.ClampMagnitude(new Vector2(Input.GetAxisRaw("Horizontal"), 0f), 1f);
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            forcedGravity = 0;
+        }
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            forcedGravity = ogFG;
+        }
     }
 
     // Update is called once per frame
@@ -54,35 +72,15 @@ public class PlayerScript : MonoBehaviour
         // Left/Right movement
         rbody.AddForce(force * forceDirection, ForceMode2D.Impulse);
 
-        if (isCallingJump)
-        {
-            CallJump();
-        }
-        Jump();
-    }
-
-    private void IsGrounded()
-    {
-
-    }
-
-    private void CallJump()
-    {
-        if (jumpTimer <= 0)
-        {
-            jumpTimer = jumpTime;
-            isCallingJump = false;
-        }
     }
 
     private void Jump()
     {
-        if (jumpTimer > 0 && rbody.velocity.y < 20)
+        Collider2D colliderFeets = Physics2D.OverlapBox(feets.transform.position, new Vector2(testX, 0.05f), 0f, theLayerMask);
+        if (colliderFeets != null)
         {
-            jumpTimer -= t;
             rbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            Jump();
         }
-    }
 
+    }
 }

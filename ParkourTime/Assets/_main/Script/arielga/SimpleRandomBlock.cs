@@ -36,13 +36,16 @@ public class SimpleRandomBlock : MonoBehaviour
             isBlock = false;
         }
 
+
         // Get components...
         rBody = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>();
         theObject = GetComponent<Transform>();
 
+        rBody.mass = Random.Range(minMass, maxMass);
+
         // Set stuff
-        if (isBlock)
+        if (!isBlock)
         {
             float randCircleSize = Random.Range(0.5f, maxSizeX);
             theObject.localScale = new Vector3(randCircleSize, randCircleSize, 0f);
@@ -55,7 +58,7 @@ public class SimpleRandomBlock : MonoBehaviour
         }
 
 
-        rBody.mass = Random.Range(minMass, maxMass);
+
         if (rBody.mass < lightValue)
         {
             spr.color = lightColor;

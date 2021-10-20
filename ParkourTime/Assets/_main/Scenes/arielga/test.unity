@@ -1245,13 +1245,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2407011421383226040, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407011421383226040, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
+      propertyPath: m_GravityScale
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 2407011421383226043, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2407011421383226044, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
       propertyPath: jumpForce
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2407011421383226047, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
       propertyPath: m_RootOrder
@@ -1259,11 +1267,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2407011421383226047, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6
+      value: -3.35
       objectReference: {fileID: 0}
     - target: {fileID: 2407011421383226047, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.05
+      value: -1.73
       objectReference: {fileID: 0}
     - target: {fileID: 2407011421383226047, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
       propertyPath: m_LocalPosition.z

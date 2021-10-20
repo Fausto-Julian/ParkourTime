@@ -21,6 +21,7 @@ public class Spawner : MonoBehaviour
 
     // Some variables
     private SimpleRandomBlock randType;
+    private float t;
 
     private void Start()
     {
@@ -29,7 +30,8 @@ public class Spawner : MonoBehaviour
     private void Update()
     {
         transform.position = new Vector3(-2.83f, player.transform.position.y + 12f, 0f);
-    }
+        t = Time.deltaTime;
+    } 
 
     void FixedUpdate()
     {
@@ -40,7 +42,7 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            currentSpawnTimer -= Time.deltaTime;
+            currentSpawnTimer -= t;
         }
     }
 
