@@ -21,11 +21,12 @@ public class BlockVelocityLimiter : MonoBehaviour
         transform.localScale = new Vector3(Random.Range(-maxXscaleModifier, maxXscaleModifier), 1f , 1f);
         float canRotate = Random.Range(0f, 2f);
 
+        body.freezeRotation = false;
         if (canRotate > 1.9f)
         {
 
         }
-        body.freezeRotation = false;
+
 
     }
 

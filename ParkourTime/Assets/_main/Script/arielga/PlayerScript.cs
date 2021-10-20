@@ -23,6 +23,7 @@ public class PlayerScript : MonoBehaviour
     private float ogFG = 0f;
 
     public float testX = 0f;
+    public float testY = 0f;
 
     public LayerMask theLayerMask;
 
@@ -76,7 +77,9 @@ public class PlayerScript : MonoBehaviour
 
     private void Jump()
     {
-        Collider2D colliderFeets = Physics2D.OverlapBox(feets.transform.position, new Vector2(testX, 0.05f), 0f, theLayerMask);
+        Collider2D colliderFeets = Physics2D.OverlapBox(feets.transform.position, new Vector2(testX, testY), 0f, theLayerMask);
+        print(colliderFeets.gameObject.name);
+
         if (colliderFeets != null)
         {
             rbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);

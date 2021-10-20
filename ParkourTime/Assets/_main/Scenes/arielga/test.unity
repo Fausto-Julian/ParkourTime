@@ -1245,21 +1245,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2407011421383226040, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2407011421383226040, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
-      propertyPath: m_GravityScale
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 2407011421383226043, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2407011421383226044, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
+      propertyPath: testX
+      value: 2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407011421383226044, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
       propertyPath: jumpForce
-      value: 10
+      value: 288
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407011421383226044, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
+      propertyPath: forcedGravity
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407011421383226044, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
+      propertyPath: theLayerMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2407011421383226047, guid: cfd56fc97a5b96a41a9ff1f781c373d6, type: 3}
       propertyPath: m_RootOrder
