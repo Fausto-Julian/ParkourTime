@@ -16,10 +16,12 @@ public class PlayerController : MonoBehaviour
     private float movement;
     private Rigidbody2D rBody;
     private bool jumpTwo;
+    private HealthController healthController;
 
     private void Awake()
     {
         rBody = GetComponent<Rigidbody2D>();
+        healthController = GetComponent<HealthController>();
     }
 
     private void Update()
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
 
         if (colliderKill != null)
         {
-            Destroy(gameObject);
+            healthController.GetDamage(30);
         }
     }
 }
