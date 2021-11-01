@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask killPlayerMask;
     [SerializeField] private LayerMask jumpMask;
 
+
+    [SerializeField] private float forceMovement;
     private float movement;
     private Rigidbody2D rBody;
     private bool jumpTwo;
@@ -54,12 +56,10 @@ public class PlayerController : MonoBehaviour
     {
         // Movimiento del player
 
-        var desiredSpeed = movement * speed;
-        var difVel = desiredSpeed - rBody.velocity.x;
-        difVel = Mathf.Clamp(difVel, -aceleracionMax, aceleracionMax);
-        var force = rBody.mass * difVel;
-
-        rBody.AddForce(new Vector2(force, 0f), ForceMode2D.Impulse);
+        float speedDesired = Input.GetAxisRaw("Horizontal") * aceleracionMax;
+        float speedDifference = speedDesired - rBody.velocity.x;
+        float forceX = Mathf.Clamp(speedDifference * forceMovement, -aceleracionMax, aceleracionMax);
+        rBody.AddForce(Vector2.right * forceX);
     }
 
     private void CheckKill()
