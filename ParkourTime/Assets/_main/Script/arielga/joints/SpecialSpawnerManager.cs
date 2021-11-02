@@ -30,7 +30,7 @@ public class SpecialSpawnerManager : MonoBehaviour
             Instantiate(objectsPrefabs[indexObject], spawnsPoints[indexSpawn].position, spawnsPoints[indexSpawn].rotation);
             float theRandTimer = Random.Range(randomTimer, randomTimer * randomMultiplierRange);
             t = 0 - theRandTimer;
-            Debug.Log($"{t} & {theRandTimer}");
+
             // Joints update added stuff:
             sfx.Play();
         }
