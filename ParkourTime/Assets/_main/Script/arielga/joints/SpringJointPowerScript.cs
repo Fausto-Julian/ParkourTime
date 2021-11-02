@@ -13,23 +13,23 @@ public class SpringJointPowerScript : MonoBehaviour
     private SpriteRenderer hSprite;
     private SpringJoint2D platformSJ;
     private bool isBroken = false;
+    private Rigidbody2D rBody;
 
     // Public ones
     public Sprite brokenSprite;
 
-    // Start is called before the first frame update
     void Start()
     {
         hSprite = holder.GetComponent<SpriteRenderer>();
         platformSJ = platform.GetComponent<SpringJoint2D>();
+        rBody = platform.GetComponent<Rigidbody2D>();
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (platformSJ == null && !isBroken)
         {
+            rBody.constraints = RigidbodyConstraints2D.None;
             isBroken = true;
             hSprite.sprite = brokenSprite;
             sfx.Play();

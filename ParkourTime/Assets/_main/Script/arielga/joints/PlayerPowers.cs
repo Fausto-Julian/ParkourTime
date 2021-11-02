@@ -5,8 +5,12 @@ using UnityEngine;
 public class PlayerPowers : MonoBehaviour
 {
     // Special references
-    [SerializeField] SliderJointPowerScript sliderPower;
-    [SerializeField] SpringJointPowerScript springPower;
+    [SerializeField] SliderJointPowerScript sliderPowerGood;
+    [SerializeField] SliderJointPowerScript sliderPowerBad;
+    [SerializeField] SpringJointPowerScript springPowerGood;
+    [SerializeField] SpringJointPowerScript springPowerBad;
+    [SerializeField] TargetJointPowerScript targetPowerGood;
+    [SerializeField] TargetJointPowerScript targetPowerBad;
     [SerializeField] AudioClip grabPowerSFX;
     [SerializeField] AudioClip usePowerSFX;
     [SerializeField] AudioSource sfx;
@@ -14,6 +18,7 @@ public class PlayerPowers : MonoBehaviour
     // Tweakable variables
     public float sliderPowerYoffset = 3f;
     public float springPowerYoffset = 3f;
+    public float targetPowerYoffset = 3f;
 
     // Some variables
     public string currentPowerString = "None";
@@ -55,6 +60,33 @@ public class PlayerPowers : MonoBehaviour
             case 9:
                 currentPowerString = "DistanceJoint";
                 break;
+            case 10:
+                currentPowerString = "SliderJointBad";
+                break;
+            case 11:
+                currentPowerString = "SpringJointBad";
+                break;
+            case 12:
+                currentPowerString = "TargetJointBad";
+                break;
+            case 13:
+                currentPowerString = "WheelJointBad";
+                break;
+            case 14:
+                currentPowerString = "RelativeJointBad";
+                break;
+            case 15:
+                currentPowerString = "HingeJointBad";
+                break;
+            case 16:
+                currentPowerString = "FrictionJointBad";
+                break;
+            case 17:
+                currentPowerString = "FixedJointBad";
+                break;
+            case 18:
+                currentPowerString = "DistanceJointBad";
+                break;
         }
 
         sfx.clip = grabPowerSFX;
@@ -67,12 +99,30 @@ public class PlayerPowers : MonoBehaviour
         {
             switch (currentPower)
             {
+                // Good spawns
                 case 1:
-                    Instantiate(sliderPower, new Vector2(transform.position.x, transform.position.y + sliderPowerYoffset), new Quaternion());
+                    Instantiate(sliderPowerGood, new Vector2(transform.position.x, transform.position.y + sliderPowerYoffset), new Quaternion());
                     break;
 
                 case 2:
-                    Instantiate(springPower, new Vector2(transform.position.x, transform.position.y + springPowerYoffset), new Quaternion());
+                    Instantiate(springPowerGood, new Vector2(transform.position.x, transform.position.y + springPowerYoffset), new Quaternion());
+                    break;
+
+                case 3:
+                    Instantiate(targetPowerGood, new Vector2(transform.position.x, transform.position.y + targetPowerYoffset), new Quaternion());
+                    break;
+
+                // Bad spawns
+                case 10:
+                    Instantiate(sliderPowerBad, new Vector2(transform.position.x, transform.position.y + sliderPowerYoffset), new Quaternion());
+                    break;
+
+                case 11:
+                    Instantiate(springPowerBad, new Vector2(transform.position.x, transform.position.y + springPowerYoffset), new Quaternion());
+                    break;
+
+                case 12:
+                    Instantiate(targetPowerBad, new Vector2(transform.position.x, transform.position.y + targetPowerYoffset), new Quaternion());
                     break;
             }
 

@@ -506,7 +506,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!234 &8792816019779312859
 SliderJoint2D:
   m_ObjectHideFlags: 0

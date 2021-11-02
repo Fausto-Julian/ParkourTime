@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SliderItem : MonoBehaviour
+public class TargetItem : MonoBehaviour
 {
     [SerializeField] private bool isBadPower = false;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -12,12 +12,13 @@ public class SliderItem : MonoBehaviour
             PlayerPowers pPowers = collision.GetComponent<PlayerPowers>();
             if (isBadPower)
             {
-                pPowers.GrabPower(10);
+                pPowers.GrabPower(12);
             }
             else
-                pPowers.GrabPower(1);
-
+                pPowers.GrabPower(3);
+            
             Destroy(gameObject);
         }
     }
+
 }
