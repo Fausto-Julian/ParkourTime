@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1918598041
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0.6792453, b: 0.13872005, a: 1}
@@ -148,7 +148,7 @@ TargetJoint2D:
   m_BreakForce: 75
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 0}
-  m_Target: {x: -8.699282, y: 56.294323}
+  m_Target: {x: 12.568291, y: -2.6912487}
   m_AutoConfigureTarget: 1
   m_MaxForce: 400
   m_DampingRatio: 1
