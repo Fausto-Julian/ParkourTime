@@ -1,21 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using Random = UnityEngine.Random;
 using UnityEngine;
 
-public class SpecialSpawnerManager : MonoBehaviour
+public class SpawnerManager : MonoBehaviour
 {
     [SerializeField] private float spawnTimer = 1f;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private List<GameObject> objectsPrefabs;
     [SerializeField] private List<Transform> spawnsPoints;
-
-    [SerializeField, Range(1f, 10f)] private float randomTimer = 1f;
-    [SerializeField, Range(1f, 3f)] private float randomMultiplierRange = 1f;
-    [SerializeField, Range(0.1f, 3f)] private float spawnRateDifficulty = 0.15f;
+    [SerializeField, Range(0.1f, 1f)] private float spawnTimerDifficulty = 0.15f;
     private float t;
 
-    [SerializeField] private AudioSource sfx;
+    // Joints update added stuff:
+    [SerializeField] private SpawnerSFX sfx;
+
 
     private void Update()
     {
@@ -29,19 +27,16 @@ public class SpecialSpawnerManager : MonoBehaviour
             var indexSpawn = Random.Range(0, spawnsPoints.Count);
             var indexObject = Random.Range(0, objectsPrefabs.Count);
             Instantiate(objectsPrefabs[indexObject], spawnsPoints[indexSpawn].position, spawnsPoints[indexSpawn].rotation);
-            float theRandTimer = Random.Range(randomTimer, randomTimer * randomMultiplierRange);
-            t = 0 - theRandTimer;
+            t = 0;
 
             // Joints update added stuff:
-            sfx.Play();
+            sfx.PlaySFX();
         }
     }
 
     public void UpdateDifficulty()
     {
-        spawnTimer -= spawnRateDifficulty;
-        randomTimer += spawnRateDifficulty;
-        randomMultiplierRange += spawnRateDifficulty / 2;
-        Debug.Log($"Difficulty updated, new times = SpecialSpawnTimer {spawnTimer} / RandomTimer {randomTimer} / MultiplierTimer {randomMultiplierRange}");
+        spawnTimer -= spawnTimerDifficulty;
+        Debug.Log($"Difficulty updated, new times = NormalSpawnTimer {spawnTimer}");
     }
 }
