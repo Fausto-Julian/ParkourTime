@@ -275,7 +275,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 10d87a20c098ce24b8d0f5c33d0941d4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -341,7 +341,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 10d87a20c098ce24b8d0f5c33d0941d4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -699,7 +699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4340747647291097074, guid: c27a7de484921374a88e68dfe0c2f57d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41
+      value: -42.71
       objectReference: {fileID: 0}
     - target: {fileID: 4340747647291097074, guid: c27a7de484921374a88e68dfe0c2f57d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1553,7 +1553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1726961798281063031, guid: 486b89187e1600d4db0c57a35fdc014d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41
+      value: -42.55
       objectReference: {fileID: 0}
     - target: {fileID: 1726961798281063031, guid: 486b89187e1600d4db0c57a35fdc014d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1600,6 +1600,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 782003285}
     m_Modifications:
+    - target: {fileID: 2614221393566616920, guid: 8b3e19fa90e04994aa270bf4e37de300, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5621842169410965908, guid: 8b3e19fa90e04994aa270bf4e37de300, type: 3}
       propertyPath: m_Name
       value: SliderJointPickupBadCircle
@@ -1685,7 +1689,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 10d87a20c098ce24b8d0f5c33d0941d4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -2261,8 +2265,6 @@ MonoBehaviour:
   playerTransform: {fileID: 350387700}
   objectsPrefabs:
   - {fileID: 1718302653}
-  - {fileID: 1275511821}
-  - {fileID: 1121341002}
   - {fileID: 1750157451}
   - {fileID: 1725155479}
   - {fileID: 650704024}
@@ -2479,6 +2481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TargetJointPickupCircle
       objectReference: {fileID: 0}
+    - target: {fileID: 5526201895384876543, guid: 8fe9a32104841bf4a925f3c7f5cc2032, type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fe9a32104841bf4a925f3c7f5cc2032, type: 3}
 --- !u!1 &1011632043
@@ -2610,7 +2616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1896060487964130879, guid: 84bf331c61e1c114f9704f891b9e9132, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41
+      value: -43.01
       objectReference: {fileID: 0}
     - target: {fileID: 1896060487964130879, guid: 84bf331c61e1c114f9704f891b9e9132, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2667,7 +2673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3206624831735797353, guid: 166387b85718fe04aa3ffc93eb6efbd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41
+      value: -43.15
       objectReference: {fileID: 0}
     - target: {fileID: 3206624831735797353, guid: 166387b85718fe04aa3ffc93eb6efbd8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2707,20 +2713,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 166387b85718fe04aa3ffc93eb6efbd8, type: 3}
---- !u!1 &1121341002 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8784819576431205933, guid: ed989861a10379c4a93793ee205cb9b2, type: 3}
-  m_PrefabInstance: {fileID: 102445379}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1121341008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8784819576431205932, guid: ed989861a10379c4a93793ee205cb9b2, type: 3}
   m_PrefabInstance: {fileID: 102445379}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1275511821 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5621842169410965908, guid: 8b3e19fa90e04994aa270bf4e37de300, type: 3}
-  m_PrefabInstance: {fileID: 672580441}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1275511827 stripped
 Transform:
@@ -2744,7 +2740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2624624718342784351, guid: e54fa5198c9978243aad5df648a42443, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41
+      value: -40.8
       objectReference: {fileID: 0}
     - target: {fileID: 2624624718342784351, guid: e54fa5198c9978243aad5df648a42443, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3976,7 +3972,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 10d87a20c098ce24b8d0f5c33d0941d4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -4024,7 +4020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6353234275249606701, guid: c21864bc3e65af14182659f3534f97a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41
+      value: -42.89
       objectReference: {fileID: 0}
     - target: {fileID: 6353234275249606701, guid: c21864bc3e65af14182659f3534f97a3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4129,7 +4125,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 10d87a20c098ce24b8d0f5c33d0941d4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -4232,6 +4228,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 782003285}
     m_Modifications:
+    - target: {fileID: 2401552327598570267, guid: f2b85986c41ba594a891c6827a8c29a9, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7900194372150361878, guid: f2b85986c41ba594a891c6827a8c29a9, type: 3}
       propertyPath: m_Name
       value: SliderJointPickupCircle
@@ -4242,7 +4242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7900194372150361879, guid: f2b85986c41ba594a891c6827a8c29a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41
+      value: -43.36
       objectReference: {fileID: 0}
     - target: {fileID: 7900194372150361879, guid: f2b85986c41ba594a891c6827a8c29a9, type: 3}
       propertyPath: m_LocalPosition.y

@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3206624831735797335, guid: 166387b85718fe04aa3ffc93eb6efbd8, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 10d87a20c098ce24b8d0f5c33d0941d4, type: 2}
     - target: {fileID: 3206624831735797352, guid: 166387b85718fe04aa3ffc93eb6efbd8, type: 3}
       propertyPath: m_Name
       value: SpringJointPickupBad
