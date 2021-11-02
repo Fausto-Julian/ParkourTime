@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
     // Joints update added stuff:
     [SerializeField] private PlayerSFX sfx;
+    [SerializeField] private PlayerAnimationsManager animScript;
+    [SerializeField] private GameObject animObject;
+    private SpriteRenderer sprRef;
     // * WIP * when the player steps on the floor after a fall. 
     // private bool alreadyLanded = false; 
 
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         rBody = GetComponent<Rigidbody2D>();
         healthController = GetComponent<HealthController>();
+        sprRef = animObject.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -78,6 +82,21 @@ public class PlayerController : MonoBehaviour
         float speedDifference = speedDesired - rBody.velocity.x;
         float forceX = Mathf.Clamp(speedDifference * forceMovement, -aceleracionMax, aceleracionMax);
         rBody.AddForce(Vector2.right * forceX);
+
+        // Joints update added stuff
+        float animSpeed = speedDesired;
+        if (speedDesired < 0)
+        {
+            sprRef.flipX = true;
+            animSpeed = -animSpeed;
+        }
+        else if (speedDesired > 0)
+        {
+            sprRef.flipX = false;
+        }
+        animScript.UpdateSpeed(animSpeed);
+        // Joints update added stuff
+
     }
 
     private void CheckKill()
