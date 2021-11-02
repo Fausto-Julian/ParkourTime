@@ -157,7 +157,7 @@ Transform:
   - {fileID: 1691338870}
   - {fileID: 734792701}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &43480246
 GameObject:
@@ -965,7 +965,7 @@ Transform:
   m_Children:
   - {fileID: 1083713895}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &199370362
 GameObject:
@@ -1473,7 +1473,7 @@ Transform:
   m_Children:
   - {fileID: 1011632044}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &350387701
 MonoBehaviour:
@@ -2022,7 +2022,7 @@ Transform:
   - {fileID: 92612559}
   - {fileID: 753935015}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650704024 stripped
 GameObject:
@@ -2651,7 +2651,7 @@ Transform:
   - {fileID: 1980683031}
   - {fileID: 846344442}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &796669751
 GameObject:
@@ -2686,7 +2686,7 @@ Transform:
   - {fileID: 1540947638}
   - {fileID: 1281014523}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &824309645
 GameObject:
@@ -2850,7 +2850,7 @@ Transform:
   - {fileID: 2126958739}
   - {fileID: 1726596840}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &891896972
 AudioSource:
@@ -5127,7 +5127,7 @@ GameObject:
   - component: {fileID: 2138529214}
   - component: {fileID: 2138529213}
   m_Layer: 9
-  m_Name: 3
+  m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5149,7 +5149,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 10d87a20c098ce24b8d0f5c33d0941d4, type: 2}
+  m_Material: {fileID: 6200000, guid: 9debd620bb8c3c243835c3d1983db6ec, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -5221,7 +5221,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.44045925, g: 0.9245283, b: 0.5699417, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5380,14 +5380,6 @@ PrefabInstance:
     - target: {fileID: 5089095570396055796, guid: e7ca6291cb90d004dbf21713dedb44b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8168136737811628314, guid: e7ca6291cb90d004dbf21713dedb44b4, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8168136737811628314, guid: e7ca6291cb90d004dbf21713dedb44b4, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1918598041
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7ca6291cb90d004dbf21713dedb44b4, type: 3}
