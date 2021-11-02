@@ -8,8 +8,11 @@ public class SpanerManager : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private List<GameObject> objectsPrefabs;
     [SerializeField] private List<Transform> spawnsPoints;
-
     private float t;
+
+    // Joints update added stuff:
+    [SerializeField] private SpawnerSFX sfx;
+
 
     private void Update()
     {
@@ -24,6 +27,9 @@ public class SpanerManager : MonoBehaviour
             var indexObject = Random.Range(0, objectsPrefabs.Count);
             Instantiate(objectsPrefabs[indexObject], spawnsPoints[indexSpawn].position, spawnsPoints[indexSpawn].rotation);
             t = 0;
+
+            // Joints update added stuff:
+            sfx.PlaySFX();
         }
     }
 }

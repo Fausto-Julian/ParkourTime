@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveCam : MonoBehaviour
 {
+    [SerializeField] private float FixedYValue = 5.5f;
     private Transform playerTransform;
 
     private void Awake()
@@ -14,6 +15,6 @@ public class MoveCam : MonoBehaviour
     private void Update()
     {
         if (playerTransform != null)
-            transform.position = new Vector3(transform.position.x, playerTransform.position.y + 5.5f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, playerTransform.position.y + FixedYValue, transform.position.z);
     }
 }
