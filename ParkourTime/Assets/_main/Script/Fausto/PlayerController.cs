@@ -78,7 +78,6 @@ public class PlayerController : MonoBehaviour
         float speedDifference = speedDesired - rBody.velocity.x;
         float forceX = Mathf.Clamp(speedDifference * forceMovement, -aceleracionMax, aceleracionMax);
         rBody.AddForce(Vector2.right * forceX);
-        Debug.Log($"{speedDesired}");
     }
 
     private void CheckKill()

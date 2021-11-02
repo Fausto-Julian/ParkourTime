@@ -6,12 +6,14 @@ public class PlayerPowers : MonoBehaviour
 {
     // Special references
     [SerializeField] SliderJointPowerScript sliderPower;
+    [SerializeField] SpringJointPowerScript springPower;
     [SerializeField] AudioClip grabPowerSFX;
     [SerializeField] AudioClip usePowerSFX;
     [SerializeField] AudioSource sfx;
 
     // Tweakable variables
     public float sliderPowerYoffset = 3f;
+    public float springPowerYoffset = 3f;
 
     // Some variables
     public string currentPowerString = "None";
@@ -30,7 +32,7 @@ public class PlayerPowers : MonoBehaviour
                 currentPowerString = "SliderJoint";
                 break;
             case 2:
-                currentPowerString = "SprintJoint";
+                currentPowerString = "SpringJoint";
                 break;
             case 3:
                 currentPowerString = "TargetJoint";
@@ -61,16 +63,21 @@ public class PlayerPowers : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E) && currentPower != 0)
+        if (Input.GetKeyDown(KeyCode.E) && currentPower != 0)
         {
             switch (currentPower)
             {
                 case 1:
                     Instantiate(sliderPower, new Vector2(transform.position.x, transform.position.y + sliderPowerYoffset), new Quaternion());
                     break;
+
+                case 2:
+                    Instantiate(springPower, new Vector2(transform.position.x, transform.position.y + springPowerYoffset), new Quaternion());
+                    break;
             }
 
             sfx.clip = usePowerSFX;
+            currentPowerString = "None";
             sfx.Play();
             currentPower = 0;
         }
