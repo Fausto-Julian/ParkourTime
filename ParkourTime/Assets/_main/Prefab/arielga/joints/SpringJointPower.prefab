@@ -50,7 +50,7 @@ MonoBehaviour:
   holder: {fileID: 4946979640764298783}
   platform: {fileID: 4946979639833084026}
   sfx: {fileID: 4946979639112925347}
-  brokenSprite: {fileID: 1885390542908301844, guid: 68169e69b2ca94d49bf7daba801be4d9, type: 3}
+  brokenSprite: {fileID: 1093725048397242416, guid: 68169e69b2ca94d49bf7daba801be4d9, type: 3}
 --- !u!114 &4946979639112925349
 MonoBehaviour:
   m_ObjectHideFlags: 0
