@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 43480247}
   - component: {fileID: 43480250}
   - component: {fileID: 43480249}
+  - component: {fileID: 43480251}
   m_Layer: 9
   m_Name: Balon
   m_TagString: Untagged
@@ -280,6 +281,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &43480251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43480246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47208ba29703f4bab9ed35a3c926ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temp: 1
+  damage: 0
+  rb: {fileID: 0}
+  temp2: 0
 --- !u!1 &92612555
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +309,7 @@ GameObject:
   - component: {fileID: 92612558}
   - component: {fileID: 92612557}
   - component: {fileID: 92612556}
+  - component: {fileID: 92612560}
   m_Layer: 9
   m_Name: Heladera
   m_TagString: Untagged
@@ -411,6 +429,22 @@ Transform:
   m_Father: {fileID: 568778387}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &92612560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92612555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47208ba29703f4bab9ed35a3c926ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temp: 1
+  damage: 10
+  rb: {fileID: 0}
+  temp2: 0
 --- !u!1001 &102445379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1008,7 +1042,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199370362}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1016,7 +1050,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b0e4565fc96f6e648aac870ebbf03189, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -1030,7 +1064,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 199370362}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b0e4565fc96f6e648aac870ebbf03189, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1411,6 +1445,7 @@ GameObject:
   - component: {fileID: 324893334}
   - component: {fileID: 324893333}
   - component: {fileID: 324893332}
+  - component: {fileID: 324893335}
   m_Layer: 9
   m_Name: Rueda
   m_TagString: Untagged
@@ -1520,6 +1555,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &324893335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324893330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47208ba29703f4bab9ed35a3c926ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temp: 1
+  damage: 10
+  rb: {fileID: 0}
+  temp2: 0
 --- !u!1 &350387697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,6 +2538,7 @@ GameObject:
   - component: {fileID: 753935014}
   - component: {fileID: 753935013}
   - component: {fileID: 753935012}
+  - component: {fileID: 753935016}
   m_Layer: 9
   m_Name: Monitor
   m_TagString: Untagged
@@ -2606,6 +2658,22 @@ Transform:
   m_Father: {fileID: 568778387}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &753935016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753935011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47208ba29703f4bab9ed35a3c926ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temp: 1
+  damage: 10
+  rb: {fileID: 0}
+  temp2: 0
 --- !u!1 &780523340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3566,6 +3634,7 @@ GameObject:
   - component: {fileID: 1039365439}
   - component: {fileID: 1039365438}
   - component: {fileID: 1039365437}
+  - component: {fileID: 1039365443}
   m_Layer: 9
   m_Name: Auto
   m_TagString: Untagged
@@ -3733,6 +3802,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1039365443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039365435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47208ba29703f4bab9ed35a3c926ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temp: 1
+  damage: 10
+  rb: {fileID: 0}
+  temp2: 0
 --- !u!1 &1047912291
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,6 +4128,7 @@ GameObject:
   - component: {fileID: 1232354184}
   - component: {fileID: 1232354183}
   - component: {fileID: 1232354182}
+  - component: {fileID: 1232354186}
   m_Layer: 9
   m_Name: Arbol
   m_TagString: Untagged
@@ -4178,6 +4264,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1232354186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232354180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47208ba29703f4bab9ed35a3c926ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temp: 1
+  damage: 10
+  rb: {fileID: 0}
+  temp2: 0
 --- !u!1 &1237500788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4552,6 +4654,7 @@ GameObject:
   - component: {fileID: 1312131217}
   - component: {fileID: 1312131216}
   - component: {fileID: 1312131215}
+  - component: {fileID: 1312131219}
   m_Layer: 9
   m_Name: ovni
   m_TagString: Untagged
@@ -4677,6 +4780,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1312131219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312131213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47208ba29703f4bab9ed35a3c926ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temp: 1
+  damage: 10
+  rb: {fileID: 0}
+  temp2: 0
 --- !u!1001 &1337875141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5028,7 +5147,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486904364}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -5036,7 +5155,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b0e4565fc96f6e648aac870ebbf03189, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -5050,7 +5169,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1486904364}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b0e4565fc96f6e648aac870ebbf03189, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -5483,6 +5602,7 @@ GameObject:
   - component: {fileID: 1838208994}
   - component: {fileID: 1838208993}
   - component: {fileID: 1838208992}
+  - component: {fileID: 1838208996}
   m_Layer: 9
   m_Name: Basurero
   m_TagString: Untagged
@@ -5628,6 +5748,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1838208996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838208990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47208ba29703f4bab9ed35a3c926ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temp: 1
+  damage: 10
+  rb: {fileID: 0}
+  temp2: 0
 --- !u!1 &1864789434
 GameObject:
   m_ObjectHideFlags: 0
@@ -5748,6 +5884,7 @@ GameObject:
   - component: {fileID: 1983150160}
   - component: {fileID: 1983150163}
   - component: {fileID: 1983150162}
+  - component: {fileID: 1983150164}
   m_Layer: 9
   m_Name: Lavarropas
   m_TagString: Untagged
@@ -5867,6 +6004,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1983150164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983150159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47208ba29703f4bab9ed35a3c926ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temp: 1
+  damage: 10
+  rb: {fileID: 0}
+  temp2: 0
 --- !u!1001 &1998439613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6004,6 +6157,7 @@ GameObject:
   - component: {fileID: 2138529215}
   - component: {fileID: 2138529214}
   - component: {fileID: 2138529213}
+  - component: {fileID: 2138529217}
   m_Layer: 9
   m_Name: Slime
   m_TagString: Untagged
@@ -6123,6 +6277,22 @@ Transform:
   m_Father: {fileID: 568778387}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2138529217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138529212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47208ba29703f4bab9ed35a3c926ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temp: 1
+  damage: 10
+  rb: {fileID: 0}
+  temp2: 0
 --- !u!1001 &2139466849
 PrefabInstance:
   m_ObjectHideFlags: 0

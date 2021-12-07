@@ -11,7 +11,7 @@ public class PlayerSFX : MonoBehaviour
 
     public AudioClip deathSFX;
     public AudioSource audioSource;
-
+    
     public void JumpLowSFX()
     {
         audioSource.clip = lowJumpSFX;

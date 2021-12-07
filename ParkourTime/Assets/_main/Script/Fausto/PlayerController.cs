@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask killPlayerMask;
     [SerializeField] private LayerMask jumpMask;
 
-
+    [SerializeField] private PlayerSFX sfx;
     [SerializeField] private float forceMovement;
     //private float movement;
     private Rigidbody2D rBody;
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
 
     // Joints update added stuff:
-    [SerializeField] private PlayerSFX sfx;
+
     [SerializeField] private PlayerAnimationsManager animScript;
     [SerializeField] private GameObject animObject;
     private SpriteRenderer sprRef;
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Compruebo si un objeto le cayo arriba del personaje, si se le cae a la cabeza muere
-        CheckKill();
+
     }
 
     private void FixedUpdate()
@@ -99,18 +99,5 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void CheckKill()
-    {
-        Collider2D colliderKill = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y + 1), new Vector2(0.5f, 0.2f), 0f, killPlayerMask);
-
-        if (colliderKill != null)
-        {
-            healthController.GetDamage(30);
-
-            // Joints update added stuff
-            if (sfx.audioSource.clip != sfx.deathSFX)
-                sfx.DeathSFX();
-        }
-
-    }
+   
 }

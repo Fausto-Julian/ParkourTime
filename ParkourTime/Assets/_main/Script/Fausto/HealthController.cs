@@ -6,7 +6,11 @@ public class HealthController : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
-    
+    [SerializeField] private PlayerSFX sfx;
+    private void Start()
+    {
+        sfx = GetComponent<PlayerSFX>();
+    }
     public void SetHealth(int health)
     {
         if (health > maxHealth)
@@ -43,7 +47,7 @@ public class HealthController : MonoBehaviour
 
         return currentHealth;
     }
-
+       
     public void SetDefaultHealth()
     {
         currentHealth = maxHealth;
@@ -52,5 +56,17 @@ public class HealthController : MonoBehaviour
     public bool IsAlive()
     {
         return currentHealth > 0;
+    }
+
+
+    public void TakeDamage(int damage)
+    {
+        if (sfx.audioSource.clip != sfx.deathSFX)
+            sfx.DeathSFX();
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            //
+        }
     }
 }
