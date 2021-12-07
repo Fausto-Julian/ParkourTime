@@ -1,17 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
-    [SerializeField] private int currentHealth;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private float currentHealth;
     [SerializeField] private PlayerSFX sfx;
-    private void Start()
+
+    public Action OnDeath;
+
+    private void Awake()
     {
         sfx = GetComponent<PlayerSFX>();
+        currentHealth = maxHealth;
     }
-    public void SetHealth(int health)
+
+    public void SetHealth(float health)
     {
         if (health > maxHealth)
         {
@@ -23,12 +29,12 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    public void GetDamage(int damage)
+    public void GetDamage(float damage)
     {
         currentHealth -= damage;
     }
 
-    public void GetHeal(int heal)
+    public void GetHeal(float heal)
     {
         currentHealth += heal;
 
@@ -38,7 +44,7 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    public int GetCurrentHealth()
+    public float GetCurrentHealth()
     {
         if (currentHealth < 0)
         {
@@ -47,7 +53,13 @@ public class HealthController : MonoBehaviour
 
         return currentHealth;
     }
-       
+
+    public float GetDefaultHealth()
+    {
+        return maxHealth;
+    }
+
+
     public void SetDefaultHealth()
     {
         currentHealth = maxHealth;
@@ -59,14 +71,14 @@ public class HealthController : MonoBehaviour
     }
 
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         if (sfx.audioSource.clip != sfx.deathSFX)
             sfx.DeathSFX();
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            //
+            OnDeath?.Invoke();
         }
     }
 }

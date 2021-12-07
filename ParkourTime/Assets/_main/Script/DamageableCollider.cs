@@ -4,30 +4,24 @@ using UnityEngine;
 
 public class DamageableCollider : MonoBehaviour
 {
-    public int temp;
-    public int damage;
-    public Rigidbody2D rb;
-    public bool temp2;
-    // Start is called before the first frame update
+    [SerializeField] private int temp;
+    [SerializeField] private int damage;
+    private Rigidbody2D rb;
+    private bool temp2;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("CabezaPlayer"))
         {
-            
-            var damageable = collision.gameObject.GetComponent<HealthController>();
+            var damageable = collision.gameObject.transform.parent.GetComponent<HealthController>();
 
-            if (damageable != null && rb.velocity.y <= -temp && temp2 == false) 
+            if (damageable != null && rb.velocity.y <= -temp && temp2 == false)
             {
                 temp2 = true;
                 print("me hizo daño");
